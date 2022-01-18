@@ -10,5 +10,6 @@ RUN npm run build
 # /app/build <-- all the stuff for outer world
 
 FROM nginx
+EXPOSE 80
 COPY --from=builder /app/build /usr/share/nginx/html
 # start nginx is a default command of nginx
